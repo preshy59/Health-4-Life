@@ -1,6 +1,6 @@
 #head #logo {
     float: left;
-    height: 120px;
+    height: 100px;
     object-fit: contain;
     margin: 0;
     mix-blend-mode:darken;
@@ -13,7 +13,7 @@
 
 }
 #header{
-    height: 120px;
+    height: 100px;
     box-shadow: 0 10px 30px -10px;
     z-index: 10;
 }

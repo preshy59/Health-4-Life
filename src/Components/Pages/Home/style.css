@@ -1,0 +1,31 @@
+#section {
+
+    padding: 20px;
+
+}
+
+#section p {
+    color: #77BB3F;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+#section h2 {
+    color: #77BB3F;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#sub-section {
+    color: #77BB3F;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+#image {
+    margin-top: 60px;
+
+    width: 45rem;
+    height: 35rem;
+
+}
