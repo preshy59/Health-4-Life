@@ -4,10 +4,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import "./style.css";
 
 const navigation = [
-  { name: 'HOME', href: '#' },
-  { name: 'BMI', href: '#' },
-  { name: 'EXCERISE', href: '#' },
-  { name: 'RESOURCES', href: '#' },
+  { name: 'HOME', href: 'Home' },
+  { name: 'BMI', href: 'BMI' },
+  { name: 'EXCERISE', href: 'Exercise' },
+  { name: 'RESOURCES', href: 'Resources' },
 ]
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
       <header className="absolute inset-x-0 top-0 z-50" id='header'>
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global" id='nav'>
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5" id='head'>
+            <a href="Home" className="-m-1.5 p-1.5" id='head'>
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
@@ -50,7 +50,7 @@ export default function Header() {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="Home" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
                   className="h-8 w-auto"
