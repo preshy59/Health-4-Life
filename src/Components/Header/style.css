@@ -1,0 +1,32 @@
+#head #logo {
+    float: left;
+    height: 120px;
+    object-fit: contain;
+    margin: 0;
+    mix-blend-mode:darken;
+}
+#head{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+
+}
+#header{
+    height: 120px;
+    box-shadow: 0 10px 30px -10px;
+    z-index: 10;
+}
+#nav{
+    margin-top: 0;
+    padding-top: 0;
+}
+#nav a{
+    color: #77BB3F;
+    font-size: 1.2rem;
+}
+
+#nav a:hover, #nav  a:focus{
+    font-size: 1.4rem;
+    color: #2e5d08;
+}
