@@ -22,9 +22,9 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* definie a default route that will render the About Component */}
         <Route path="/BMI" element={<BMI />} />
-      {/* definie a default route that will render the Project Gallery Component */}
+      {/* definie a default route that will render the Exercise Component */}
         <Route path="/Exercise" element={<Exercise />} />
-        {/* definie a default route that will render the Contact Component */}
+        {/* definie a default route that will render the Resource Component */}
         <Route path="/Resources" element={<Resources />} />
       </Routes>
     </div>
