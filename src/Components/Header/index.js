@@ -4,10 +4,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import "./style.css";
 
 const navigation = [
-  { name: 'HOME', href: 'Home' },
-  { name: 'BMI', href: 'BMI' },
-  { name: 'EXCERISE', href: 'Exercise' },
-  { name: 'RESOURCES', href: 'Resources' },
+  { name: 'HOME', href: '/' },
+  { name: 'BMI', href: '/BMI' },
+  { name: 'EXCERISE', href: '/Exercise' },
+  { name: 'RESOURCES', href: '/Resources' },
 ]
 
 export default function Header() {
@@ -40,10 +40,11 @@ export default function Header() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <a key={item.name} href = {item.href} className="text-sm font-semibold leading-6 text-gray-900">
                 {item.name}
+                
               </a>
-            ))}
+                    ))}
           </div>
          </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
