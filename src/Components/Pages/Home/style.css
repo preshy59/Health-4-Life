@@ -1,0 +1,61 @@
+#section {
+
+    padding: 20px;
+
+}
+
+#section p {
+    color: #77BB3F;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+#section h2 {
+    color: #77BB3F;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#sub-section {
+    color: #77BB3F;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+#image {
+    margin-top: 60px;
+    -webkit-box-shadow: 0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgb(119, 187, 63);
+    -moz-box-shadow: 0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgb(119, 187, 63);
+    box-shadow: 0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgb(119, 187, 63);
+    width: 45rem;
+    height: 35rem;
+
+}
+
+#image {
+
+    position: relative;
+
+    animation-name: move;
+
+    animation-duration: 2s;
+
+    animation-direction: alternate;
+
+    animation-timing-function: ease-in-out;
+
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes move {
+
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 70px;
+    }
+
+}
