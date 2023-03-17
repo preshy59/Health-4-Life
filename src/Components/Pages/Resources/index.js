@@ -64,7 +64,7 @@ export default function Resources() {
                                         {post.title}
                                     </a>
                                 </h3>
-                                <p className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3" id="description">{post.description} <a href= {post.href} id= "read">READ MORE</a></p>
+                                <p className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3" id="description">{post.description} <a href= {post.href} id= "read" target= "_parent">READ MORE</a></p>
                             </div>
                         </article>
                     ))}

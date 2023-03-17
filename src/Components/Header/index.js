@@ -7,6 +7,7 @@ const navigation = [
   { name: 'HOME', href: '/' },
   { name: 'BMI', href: '/BMI' },
   { name: 'EXCERISE', href: '/Exercise' },
+  { name: 'NUTRIENT', href: '/Nutrient' },
   { name: 'RESOURCES', href: '/Resources' },
 ]
 
