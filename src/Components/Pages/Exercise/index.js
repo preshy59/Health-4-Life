@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import CaloriesCard from '../../CaloriesCard';
+import ActivityCard from '../../ActivityCard';
 
 
 function Exercise() {
@@ -85,24 +87,24 @@ function Exercise() {
             .catch(error => console.log(error));
     }
     //input card
-    function ActivityCard({ id, name, imageSource, onClick }) {
-        return (
-            <div className="max-w-sm w-32 rounded bg-gradient-to-b from-orange-200 to-orange-100 m-1 shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                onClick={() => onClick(name)} key={id}>
-                <img className="w-auto" src={imageSource} alt={name} />
-                <div className="font-bold text-xl mb-2">{name}</div>
-            </div>
-        )
-    }
+    // function ActivityCard({ id, name, imageSource, onClick }) {
+    //     return (
+    //         <div className="max-w-sm w-32 rounded bg-gradient-to-b from-orange-200 to-orange-100 m-1 shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+    //             onClick={() => onClick(name)} key={id}>
+    //             <img className="w-auto" src={imageSource} alt={name} />
+    //             <div className="font-bold text-xl mb-2">{name}</div>
+    //         </div>
+    //     )
+    // }
     // output card
-    function CaloriesCard({ sport, caloriesPerHour }) {
-        return (
-            <div className="max-w-sm w-32 p-4 rounded m-1 bg-gradient-to-b from-orange-200 to-orange-100 shadow-lg">
-                <div className="font-bold text-l mb-2">{sport}</div>
-                <div className="font-bold text-l mb-2">{caloriesPerHour} calories per hour</div>
-            </div>
-        );
-    }
+    // function CaloriesCard({ sport, caloriesPerHour }) {
+    //     return (
+    //         <div className="max-w-sm w-32 p-4 rounded m-1 bg-gradient-to-b from-orange-200 to-orange-100 shadow-lg">
+    //             <div className="font-bold text-l mb-2">{sport}</div>
+    //             <div className="font-bold text-l mb-2">{caloriesPerHour} calories per hour</div>
+    //         </div>
+    //     );
+    // }
     // render page
     return (
         <body className="h-screen bg-gradient-to-b from-green-100 to-green-300">
