@@ -3,8 +3,10 @@ import axios from 'axios';
 
 function Exercise() {
 
+    const [data, setData] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [selectedCard, setSelectedCard] = useState([]);
+    const [searchValid, setSearchValid] = useState(true);
 
     const sportCards = [
         {
@@ -19,6 +21,8 @@ function Exercise() {
         },
     ];
 
+
+    // running <img src="https://img.icons8.com/fluency-systems-filled/96/null/exercise.png"/>
     const options = {
         method: 'GET',
         url: 'https://calories-burned-by-api-ninjas.p.rapidapi.com/v1/caloriesburned',
@@ -30,16 +34,25 @@ function Exercise() {
     };
 
     function handleChange(event) {
-        setInputValue(event.dataset.dataTarget);
+        setInputValue(event.target.value);
     }
 
-    // function handleSubmit(event) {
-    //     event.preventDefault();
-    //     options.params.activity = inputValue;
-    //     axios.request(options)
-    //         .then(response => setData(response.data))
-    //         .catch(error => console.log(error));
-    // }
+    function handleSubmit(event) {
+        event.preventDefault();
+        options.params.activity = inputValue;
+        axios.request(options)
+            .then(response => processResponse(response.data))
+            .catch(error => console.log(error));
+    }
+
+    function processResponse(data) {
+        if (data.length === 0) {
+            setSearchValid(false)
+        } else {
+            setData(data);
+            setSearchValid(true);
+        }
+    }
 
     function handleClick(id) {
         setSelectedCard(id);
@@ -53,9 +66,9 @@ function Exercise() {
 
                         {sportCards.map((sport) => (
                             <div className="max-w-sm rounded overflow-hidden shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                            onClick={() => handleClick(sport.id)} key={sport.title} data-target={sport.title}>
+                                onClick={() => handleClick(sport.id)} key={sport.title} data-target={sport.title}>
                                 <img className="w-full" src={sport.imageSource} alt={sport.title} data-target={sport.title} />
-                                <div className="px-6 py-4"  data-target={sport.title}>
+                                <div className="px-6 py-4" data-target={sport.title}>
                                     <div className="font-bold text-xl mb-2" data-target={sport.title} >{sport.title}</div>
                                 </div>
                             </div>
@@ -64,29 +77,37 @@ function Exercise() {
                     </div>
                 </div>
             </div>
-      {selectedCard && (
-        <div className="selected-card">
-          You selected card {selectedCard}.
-        </div>
-      )}
-
-            {/* <form onSubmit={handleSubmit}>
+            {selectedCard && (
+                <div className="selected-card">
+                    You selected card {selectedCard}.
+                </div>
+            )}
+            <form onSubmit={handleSubmit}>
                 <label>
                     Enter your sport:
                     <input type="text" value={inputValue} onChange={handleChange} />
                 </label>
                 <button type="submit">Submit</button>
-            </form> */}
-            {/* <div>
+            </form>
+            <div>
+                {!searchValid && (
+                    <div>
+                        Sorry, no results for {inputValue}
+                    </div>
+                )}
+            </div>
+            <div>
+                {searchValid && (
                 <ul>
                     {data.map(post => (
                         <li key={post.name}>
                             <h1>{post.name}</h1>
                             <h2>{post.calories_per_hour}</h2>
                         </li>
-                    ))}
+                        ))}
                 </ul>
-            </div> */}
+                )}
+            </div>
         </>
     );
 };
