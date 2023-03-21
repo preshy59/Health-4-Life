@@ -85,69 +85,57 @@ function Exercise() {
             .catch(error => console.log(error));
     }
     //input card
-    function ActivityCard( { id, name, imageSource, onClick } ) {
+    function ActivityCard({ id, name, imageSource, onClick }) {
         return (
-            <div className="max-w-sm w-32 rounded bg-orange-100 overflow-hidden shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            <div className="max-w-sm w-32 rounded bg-gradient-to-b from-orange-200 to-orange-100 m-1 shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                 onClick={() => onClick(name)} key={id}>
                 <img className="w-auto" src={imageSource} alt={name} />
-                <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{name}</div>
-                </div>
+                <div className="font-bold text-xl mb-2">{name}</div>
             </div>
         )
     }
     // output card
-    function CaloriesCard( { sport, caloriesPerHour } ) {
+    function CaloriesCard({ sport, caloriesPerHour }) {
         return (
-            <div className="max-w-sm w-32 rounded bg-orange-100 overflow-hidden shadow-lg cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{sport}</div>
-                    <div className="font-bold text-xl mb-2">{caloriesPerHour}</div>
-                </div>
+            <div className="max-w-sm w-32 p-4 rounded m-1 bg-gradient-to-b from-orange-200 to-orange-100 shadow-lg">
+                <div className="font-bold text-l mb-2">{sport}</div>
+                <div className="font-bold text-l mb-2">{caloriesPerHour} calories per hour</div>
             </div>
         );
     }
     // render page
     return (
-        <>
-            <div className="overflow-hidden bg-green-100 py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="mx-auto grid max-w-2xl grid-cols-6 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-6" id='section'>
-                        {sportCards.map((sport) => (
-                            <ActivityCard id={sport.id} name={sport.title} imageSource={sport.imageSource} onClick={handleClick} />
-                        )
-                        )}
-                    </div>
-                </div>
+        <body className="h-screen bg-gradient-to-b from-green-100 to-green-300">
+            {/* cards for predefined sports */}
+            <div className="w-full flex pt-32 flex-wrap mx-auto justify-center">
+                {sportCards.map((sport) => (
+                    <ActivityCard id={sport.id} name={sport.title} imageSource={sport.imageSource} onClick={handleClick} />
+                )
+                )}
             </div>
-            <form className="bg-green-100 border-solid group-hover text-black focus-within:text-green-600 focus-within:underline" onSubmit={handleSubmit}>
+            {/* form to choose a sport */}
+            <form className="w-full flex pt-8 pl-8 justify-center group-hover text-black focus-within:text-green-600 focus-within:underline" onSubmit={handleSubmit}>
                 <label className="p-3 text-xl">
-                    Enter your sport:
-                    <input type="text" value={inputValue} onChange={handleChange} />
+                    Enter your sport
+                    <input className="pl-4" type="text" value={inputValue} onChange={handleChange} />
                 </label>
-                <button className="bg-orange-100 hover:bg-orange-200 text-black font-bold py-2 px-4 border border-blue-700 rounded" type="submit">Submit</button>
+                <button className="bg-orange-100 hover:bg-orange-200 text-black font-bold p-2 border border-blue-700 rounded" type="submit">Submit</button>
             </form>
-            <div className="bg-green-100">
-                {!searchValid && (
-                    <div>
-                        Sorry, no results for {inputValue}
-                    </div>
-                )}
-            </div>
-            <div className="bg-green-100">
-                {searchValid && (
-                    <div className="overflow-hidden bg-green-100 py-24 sm:py-32">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="mx-auto grid max-w-2xl grid-cols-6 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-6" id='section'>
-                                {data.map(post => (
-                                    <CaloriesCard sport={post.name} caloriesPerHour={post.calories_per_hour} />
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </div>
-        </>
+            {!searchValid && ( // Error message
+                <div className="text-xl text-red-500 pl-24"> Sorry, no results for {inputValue} </div>
+            )}
+            {/* successful search calorie cards */}
+            {searchValid && (
+                <div className="w-full flex p-8 flex-wrap mx-auto justify-center">
+                    {data.map(post => (
+                        <CaloriesCard sport={post.name} caloriesPerHour={post.calories_per_hour} />
+                    ))}
+                </div>
+            )}
+            <a className="p-6 text-left text-sm"
+                href="https://icons8.com/"
+            >Icons courtesy of Icons8</a>
+        </body>
     );
 };
 
