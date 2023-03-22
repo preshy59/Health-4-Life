@@ -2,7 +2,7 @@ import axios from "axios";
 const BASEURL = "https://dietagram.p.rapidapi.com/apiFood.php";
 
 
-export default {
+ const API = {
   searchTerms: async(query) =>{ 
 
     const options = {
@@ -19,3 +19,5 @@ export default {
     return result;
   }
 };
+
+export default API;
