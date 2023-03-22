@@ -4,6 +4,7 @@ import ActivityBoard from '../../ActivityBoard';
 import CaloriesBoard from '../../CaloriesBoard';
 import ExerciseForm from '../../ExerciseForm';
 
+
 function Exercise() {
 
     // data returned by the api
@@ -65,7 +66,9 @@ function Exercise() {
             )}
             {/* successful search displays calorie cards */}
             {searchValid && (
-                <CaloriesBoard data={data} />)}
+                <>
+                    <CaloriesBoard data={data} />
+                </>)}
         </body>
     );
 };
