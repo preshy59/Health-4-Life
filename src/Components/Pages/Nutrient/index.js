@@ -1,26 +1,77 @@
-import "./style.css";
+import React, { useState, useEffect } from "react";
+import API from "../../../utils/API.js";
+import SearchForm from "../../SearchForm";
+import FoodResult from "../../Result"
 
 
-export default function Example() {
+function Nutrient() {
+    const [name, setName] = useState("");
+    const [fat, setFat] = useState("");
+    const [calroies, setCalroies] = useState("");
+    const [protein, setProtein] = useState("");
+    const [carbs, setCarbonhydrate] = useState("");
+    const [error, setError] = useState("");
+
+    const[food, setFood] = useState("");
+
+    useEffect(() => {
+        if (!food) {
+            return;
+        }
+        console.log(API);
+
+            const APISearch = async() =>{ 
+                const foodResult = await  API.searchTerms(food);
+                setName(foodResult.data.dishes[0].name);
+                setProtein(foodResult.data.dishes[0].protein);
+                setFat(foodResult.data.dishes[0].fat);
+                setCalroies(foodResult.data.dishes[0].caloric);
+                setCarbonhydrate(foodResult.data.dishes[0].carbon);
+                console.log(foodResult);
+            }
+
+        // API.searchTerms(food)
+        //     .then(foodResult => {
+        //         if (foodResult.data.length === 0) {
+        //             throw new Error("No foodResultults found.");
+        //         }
+        //         if (foodResult.data.status === "error") {
+        //             throw new Error(foodResult.data.message);
+        //         }
+        //         setName(foodResult.data[0][1]);
+        //         setProtein(foodResult.data[0][6]);
+        //         setFat(foodResult.data[0][4]);
+        //         setCalroies(foodResult.data[0][2]);
+        //         setCarbonhydrate(foodResult.data[0][5]);
+        //     })
+        //     .catch(err => setError(err));
+        APISearch();
+    }, [food]);
+
+    const search = (searchTerms) => { 
+        
+        console.log(searchTerms);
+        setFood(searchTerms);
+    }
+
     return (
-        <div className="bg-white py-24 sm:py-32" id="resources">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8"></div>
-      <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <label htmlFor="search" className="block text-sm font-medium leading-6 text-gray-900">
-        Enter the name of the Food
-        </label>
-        <div className="relative mt-2 rounded-md shadow-sm">
-         <input
-            type="text"
-            name="search"
-            id="search"
-            className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            placeholder="example, cake"
-          />
+        <div>
+            <SearchForm
+                search={search}
+                // foodResultults={search}
+            />
+            <FoodResult 
+            name = {name}
+            protein = {protein}
+            fat = {fat}
+            carbs = {carbs}
+            carlories = {calroies}
+            result = {search}
+            
+            />
+
         </div>
-      </div>
-      <div></div>
-      </div>
-    )
-  }
-  
+
+    );
+}
+export default Nutrient;
