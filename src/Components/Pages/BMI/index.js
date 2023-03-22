@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 // import { QueryClient, QueryClientProvider } from "react-query";
 import URI from "urijs";
 import { View, Text, StyleSheet, TextInput } from "react-native";
+import './style.css';
 // import Logo from '../../../../public/assets/images/_Health-4-Life-1.png';
 
 
@@ -92,7 +93,7 @@ export default function BMI() {
 								<Text
 									style={{ fontSize: 20, fontWeight: "bold" }}
 								>
-									You are Normal
+									Normal weight
 								</Text>
 							</>
 						)}
@@ -114,7 +115,7 @@ export default function BMI() {
 								<Text
 									style={{ fontSize: 20, fontWeight: "bold" }}
 								>
-									You are Obese
+									Obesity class II
 								</Text>
 							</>
 						)}
@@ -128,12 +129,6 @@ export default function BMI() {
 					)}
 				</View>
 			)}
-			{/* <br />
-      <div className="2xl:container 2xl:mx-auto 2xl:px-0 py-3 px-10">
-        <Carousel />
-      </div>
-      <br /> */}
-
 		</View>
 	</>
 	);
@@ -152,7 +147,9 @@ const styles = StyleSheet.create({
 	input: {
 		height: 40,
 		margin: 12,
-		borderWidth: 1,
+		borderWidth: 3,
+		borderRadius: "25px",
+		borderColor: '#77BB3F',
 		padding: 10,
 	},
 	imageLogo: {
