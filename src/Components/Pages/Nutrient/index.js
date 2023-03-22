@@ -10,7 +10,7 @@ function Nutrient() {
     const [calroies, setCalroies] = useState("");
     const [protein, setProtein] = useState("");
     const [carbs, setCarbonhydrate] = useState("");
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
 
     const[food, setFood] = useState("");
 
