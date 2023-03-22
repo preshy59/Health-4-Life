@@ -22,9 +22,9 @@ function App() {
           {/* Define a default route that will render the Home component */}
           <Route path="/" element={<Home />} />
           {/* definie a default route that will render the About Component */}
-          {/* <Route path="/BMI" element={<BMI />} /> */}
+          <Route path="/BMI" element={<BMI />} />
           {/* definie a default route that will render the Exercise Component */}
-          {/* <Route path="/Exercise" element={<Exercise />} /> */}
+          <Route path="/Exercise" element={<Exercise />} />
            {/* definie a default route that will render the Nutrient Component */}
            <Route path="/Nutrient" element={<Nutrient />} />
           {/* definie a default route that will render the Resource Component */}
