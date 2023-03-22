@@ -66,9 +66,8 @@ function Exercise() {
             )}
             {/* successful search displays calorie cards */}
             {searchValid && (
-                <>
                     <CaloriesBoard data={data} />
-                </>)}
+                )}
         </body>
     );
 };
