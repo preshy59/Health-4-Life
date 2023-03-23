@@ -1,70 +1,131 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<a name="readme-top"></a>
 
-In the project directory, you can run:
+<!-- PROJECT TITLE -->
 
-### `npm start`
+<h3 align="center">HEALTH 4 LIFE</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#project-description"> Project Description</a>
+      <ul>
+        <li><a href="#our-process">Our Process</a></li>
+        <li><a href="#built-with">Technologies/Libraies Used</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+         <li><a href="#installation">Installation / Run Locally<</a></li>
+        </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#question">Questions</a></li>
+    <li><a href="#authors">Authors</a></li>
+    </ol>
+</details>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- DESCRIPTION OF THE PROJECT -->
+## Project Description
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is basically design to promote the benefit of living a helathy lifestyle. It demostrate the benefit of helathy living and how to substain it.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Our Process
+As a team we aired our various view on what we will liked to design and te impact it will have, later on we decide to design a website that educate the importances of Healthy Lifestyle.  We then have to find API's and libraies that we can intgrate to get the end result. Afterwards, we divide the workload amon ourselves evenly. 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Technologies/Libraies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ * HTML
+ * CSS
+ * Tailwinds
+ * API
+ * JAVASCRIPT
+ * NODE.JS
+ * React.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<!-- GETTING STARTED -->
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Below is instruction on how to install the project locally to test is functionality.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
+Follow the steps below to install this incridiable project:
 
-### Code Splitting
+1. Clone the repo
+   'sh
+   git clone 
+   '
+2. Install NPM packages
+   'sh
+   npm install
+   '
+3. Create React App
+    'sh
+    npx create-react-app choiceofName
+    '
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Replace the existing src with the project src
 
-### Analyzing the Bundle Size
+5. Install various libraries e.g tailwind
+    'sh
+    npm i tailwind
+    '
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+6. Test Run the Project
+    'sh
+    npm start
+    '
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- DEMO ON HOW THE PROJECT WORKS -->
+## Demo
 
-### Advanced Configuration
+![Screenshoot description of the application](./public/assets/video/health-4-life%20screenshoot.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- CONTRIBUTING -->
+## Contributing
 
-### `npm run build` fails to minify
+Contribution are always welcome, as it what make the open source community such an amazing place to learn, create and inspire. if you wish to contribute and make the project better, find below the step that  are to be followed to get started
+1. Fork the Project
+2. Create your Feature Branch ('git checkout -b feature/Health-4-Life')
+3. Commit your Changes ('git commit -m 'Add some changes Health-4-Life'')
+4. Push to the Branch ('git push origin feature/Health-4-Life')
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- LICENSE -->
+## License
+
+Distrubed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<!-- QUESTIONS -->
+## Questions
+
+<h1> Email : okemba50@gmail.com</h1>
+<h1> Email : goatwipe@gmail.com</h1>
+<h1> Email : sergiactive@gmail.com</h1>
+
+## Authors
+Stephen Rice
+- GitHub - [S-R-i-c-e](https://github.com/S-R-i-c-e)
+
+Ebele Precious Okemba
+- GitHub - [preshy59](https://github.com/preshy59)
+
+Sergio Utrera
+- GitHub - [Pixelfobia](https://github.com/Pixelfobia)
