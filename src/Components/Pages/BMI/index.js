@@ -18,7 +18,7 @@ const fetchBMI = async (weight, height) => {
 	const response = await fetch(url, {
 		method: "GET",
 		headers: {
-			'X-RapidAPI-Key': 'c327f58b16msh8eef6fb369749fep1feed3jsna36c18c50450',
+			'X-RapidAPI-Key': '7986c133bemsh5ec2132fcc9184ep1df58fjsn993ce4ff363b',
 			'X-RapidAPI-Host': 'mega-fitness-calculator1.p.rapidapi.com'
 		},
 	});
