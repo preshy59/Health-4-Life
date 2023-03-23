@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 // import { QueryClient, QueryClientProvider } from "react-query";
 import URI from "urijs";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, Image, StyleSheet, TextInput } from "react-native";
 import './style.css';
-// import Logo from '../../../../public/assets/images/_Health-4-Life-1.png';
+import Logo from '../../assets/images/_Health-4-Life-1.png';
 
 
 const fetchBMI = async (weight, height) => {
@@ -57,9 +57,10 @@ export default function BMI() {
 
 	return (<>
 		<View style={styles.container}>
-			{/* <Image
+			<Image
+				source=  {{ uri: Logo }}
 				style={styles.imageLogo}
-				source={require('./assets/images/_Health-4-Life-1.png')} /> */}
+				 />
 			<Text style={{ fontSize: 30, fontWeight: "bold", color: "#77BB3F" }}>
 				BMI Calculator
 			</Text>
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: "#fff",
 		alignItems: "center",
-		paddingTop: 300,
+		paddingTop: 10,
 		position: "relative",
 		top: "100px",
 	},
@@ -153,10 +154,8 @@ const styles = StyleSheet.create({
 		padding: 10,
 	},
 	imageLogo: {
-		height: "100px",
-		weight: "80px",
-		position: "relative",
-		top: "150px",
+		width: '350px',
+    height: '350px',
 	}
 });
 
