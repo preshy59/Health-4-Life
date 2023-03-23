@@ -29,7 +29,16 @@ export default function Home() {
                     <div className="lg:pr-8 lg:pt-4">
                         <div className="lg:max-w-lg">
                             <h2 className="text-base font-semibold leading-7 text-indigo-600 heading">Healthy Lifestyle</h2>
-                            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A way better to be Wealthy</p>
+                            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                                <div id="container">
+                                    <div id="flip">
+                                        <div><div> Improve your Brain Health</div></div>
+                                        {/* <div id='sec'><div> Boost your Mood</div></div> */}
+                                        <div><div>Lengthens Lifespan</div></div>
+                                        <div><div>Prevent Certain Disease</div></div>
+                                    </div>
+
+                                </div></p>
                             <p className="mt-6 text-lg leading-8 text-gray-600">
                                 Living a Healthy lifestyle is essential to our health and well-being as
                                 it helps to prevent many disease that are likely to occur now or in the future.
