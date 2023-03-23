@@ -1,7 +1,7 @@
 import axios from "axios";
 const BASEURL = "https://dietagram.p.rapidapi.com/apiFood.php";
 
-
+// storing the API content in a const variable
  const API = {
   searchTerms: async(query) =>{ 
 

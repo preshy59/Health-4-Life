@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import "./style.css";
 
+//storing the object of array in a const variable
 const navigation = [
   { name: 'HOME', href: '/' },
   { name: 'BMI', href: '/BMI' },
@@ -19,6 +20,7 @@ export default function Header() {
     <div className="bg-white ">
       <header className="absolute inset-x-0 top-0 z-50" id='header'>
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global" id='nav'>
+         {/* div that hold the logo inserted in nav  */}
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5" id='head'>
               <span className="sr-only">Your Company</span>
@@ -40,6 +42,7 @@ export default function Header() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
+          {/* mapping the object of array that contains the various navs and their link */}
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <Link key={item.name} to = {item.href} className="text-sm font-semibold leading-6 text-gray-900">
@@ -61,6 +64,7 @@ export default function Header() {
                   alt="site Logo"
                 />
               </a>
+              {/* button to that display the link in a responsive mode */}
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
