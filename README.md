@@ -28,7 +28,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#demo">Demo</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#question">Questions</a></li>
+    <li><a href="#links">Project Link</a></li>
     <li><a href="#authors">Authors</a></li>
     </ol>
 </details>
@@ -113,12 +113,12 @@ Contribution are always welcome, as it what make the open source community such 
 
 Distrubed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<!-- QUESTIONS -->
-## Questions
+<!-- LINKS -->
+## Project Link
+GitHub Link : https://github.com/S-R-i-c-e/Health-4-Life
+Deployment Link: https://cool-heliotrope-4ec7d1.netlify.app/
 
-<h1> Email : okemba50@gmail.com</h1>
-<h1> Email : goatwipe@gmail.com</h1>
-<h1> Email : sergiactive@gmail.com</h1>
+
 
 ## Authors
 Stephen Rice
