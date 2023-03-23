@@ -1,0 +1,37 @@
+/* .nutrient{
+background: linear-gradient(to top, #B5AC49, #3CA55C); 
+} */
+
+.logo{
+    position: relative;
+    margin-top: -40px;
+}
+
+.form{
+    margin-top: -60px !important;
+    padding-top: -60px;
+}
+
+.label{
+     color: #77BB3F;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+#search{
+    height: 60px;
+    width: 100%;
+    border: 1px solid #77BB3F;
+    border-radius: 25px;
+    
+
+}
+#button{
+    background-color: #77BB3F;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    margin: -10px auto;
+    
+}
