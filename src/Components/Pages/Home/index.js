@@ -1,7 +1,7 @@
 import { DocumentIcon } from '@heroicons/react/20/solid';
 import "./style.css";
 
-
+// created an object of array that store the feature of healthy living in a const variable
 const features = [
     {
         name: 'Exercise: ',
@@ -30,6 +30,7 @@ export default function Home() {
                         <div className="lg:max-w-lg">
                             <h2 className="text-base font-semibold leading-7 text-indigo-600 heading">Healthy Lifestyle</h2>
                             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                                {/* div containing the div that animate in the page */}
                                 <div id="container">
                                     <div id="flip">
                                         <div><div> Improve your Brain Health</div></div>
@@ -44,6 +45,7 @@ export default function Home() {
                                 it helps to prevent many disease that are likely to occur now or in the future.
                                 Remember that "Health is Wealth".
                             </p>
+                            {/* dl that displays the object of array using the map function to render */}
                             <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none" id='sub-section'>
                                 {features.map((feature) => (
                                     <div key={feature.name} className="relative pl-9">

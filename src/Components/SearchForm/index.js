@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./style.css";
 
-
+// create a function  with props 
 function SearchForm(props) {
     const [search, setSearch] = useState("");
 
+    // create a const variable that store the function that handles change of value in the form 
     const handleInputChange = event => {
 
         setSearch(event.target.value);
-        console.log(event);
+        
     };
-
+// create a const variable that store the function that handles the submittion of value in the form 
     const handleSubmit = event => {
         event.preventDefault();
         props.search(search);
@@ -21,6 +22,7 @@ function SearchForm(props) {
         <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8 nutrient">
             <div className="w-full max-w-md space-y-8">
                 <div>
+                    {/* logo of the website */}
                     <img
                         className="mx-auto h-25 w-auto logo"
                         src="./assets/images/_Health-4-Life-1.png"
@@ -28,12 +30,13 @@ function SearchForm(props) {
                     />
                 </div>
                 <form className="mt-8 space-y-6 form">
+                    {/* label for the search button */}
                     <label htmlFor="search" className="block text-sm font-medium leading-6 text-gray-900 label">
                         Enter the name of the Food
                     </label>
                     <div className="relative mt-2 rounded-md shadow-sm">
-                        <input
-
+                        {/* function that handles the input change called inside the input tag using the On change keyword..*/}
+                        <input                        
                             onChange={handleInputChange}
                             value={props.value}
                             type="text"
@@ -44,6 +47,8 @@ function SearchForm(props) {
                         />
                     </div>
                     <div>
+
+                        {/* function that handles the form submit called with the button tag */}
                         <button
                             onClick={handleSubmit}
 

@@ -5,15 +5,19 @@ import FoodResult from "../../Result"
 
 
 function Nutrient() {
+    //  utilizing of hook (useState) for some functionality
     const [error, setError] = useState("");
     const [food, setFood] = useState("");
     const [foodResult, setFoodResult] = useState("");
+
+    // implentation of in the API code inside the useEffect which helps to prevent the code from running expect when required
     useEffect(() => {
         if (!food) {
             return;
         }
         console.log(API);
 
+        // utilizing the API content and assign its values to the corresponding data
         const APISearch = async () => {
             const foodResult = await API.searchTerms(food);
 
@@ -23,9 +27,11 @@ function Nutrient() {
             if (foodResult.data.status === "error") {
                 setError(foodResult.data.message);
             }
+
             const results = foodResult.data.dishes.map(dish => {
-                //return foodResult
+                
                 return (
+                    // calling the variable that represnt the foodResult that is been imported and assign the values 
                     <FoodResult
                         name={dish.name}
                         protein={dish.protein}
@@ -49,10 +55,13 @@ function Nutrient() {
 
     return (
         <div>
+             {/* calling the variable that represent the Search that is been imported and assign the values  */}
             <SearchForm
                 search={search}
 
             />
+
+            {/* using of h1 to represent an error that might likely occur */}
             {error ? <h1>{error}</h1> : ""}
 
             {foodResult}
