@@ -43,10 +43,6 @@ function ActivityBoard({ handleClick }) {
                 )
                 )}
             </div>
-            {/* icons website credited */}
-            <a className="p-6 pt-6text-left text-sm"
-                href="https://icons8.com/"
-            >Icons courtesy of Icons8</a>
         </>
     )
 }
