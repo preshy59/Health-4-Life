@@ -1,22 +1,20 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./style.css";
-
-
 
 
 function SearchForm(props) {
     const [search, setSearch] = useState("");
 
     const handleInputChange = event => {
-        
-                setSearch(event.target.value);
-                console.log(event);
+
+        setSearch(event.target.value);
+        console.log(event);
     };
 
-     const handleSubmit = event => {
+    const handleSubmit = event => {
         event.preventDefault();
         props.search(search);
-     }
+    }
 
     return (
 
@@ -35,7 +33,7 @@ function SearchForm(props) {
                     </label>
                     <div className="relative mt-2 rounded-md shadow-sm">
                         <input
-                        
+
                             onChange={handleInputChange}
                             value={props.value}
                             type="text"

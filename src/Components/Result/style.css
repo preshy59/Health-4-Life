@@ -1,0 +1,44 @@
+.result{
+ margin: 0 auto;
+ margin-top: -30px;
+}
+
+.result ul{
+    color: #77BB3F;
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 10px;
+        color: #77BB3F;
+}
+
+.list p{
+    padding: 10px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* .chart{
+    width: 100%;
+    height: 30%;
+    margin-top: 0;
+    display: flex;
+    position: relative;
+    left: -170px;
+    top: 50px;
+}
+.chart .pie{
+    width: 30%;
+    height: 25%;
+} */

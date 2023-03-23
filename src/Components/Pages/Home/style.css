@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+body {
+    margin: 0px;
+    font-family: 'Roboto';
+}
+
 #section {
 
     padding: 20px;
@@ -6,29 +14,33 @@
 
 #section p {
     color: #77BB3F;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: justify;
+    margin-top: 8px;
 }
 
 #section h2 {
     color: #77BB3F;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 #sub-section {
     color: #77BB3F;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: justify;
 }
 
 #image {
-    margin-top: 60px;
+    margin-top: 40px;
     -webkit-box-shadow: 0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgb(119, 187, 63);
     -moz-box-shadow: 0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgb(119, 187, 63);
     box-shadow: 0px -1px 25px rgba(0, 0, 0, 0.5), 0px 1px 25px rgb(119, 187, 63);
-    width: 45rem;
-    height: 35rem;
+    width: 33rem;
+    height: 33rem;
+    margin-left: -10px;
+
 
 }
 
@@ -55,7 +67,62 @@
     }
 
     to {
-        top: 70px;
+        top: 80px;
     }
 
+}
+
+#container {
+    margin-top: 5px;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: inherit;
+    display: block;
+    margin-bottom: 0;
+}
+
+#flip {
+    height: 50px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+#flip>div>div {
+    color: #034627;
+    padding: 4px 12px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
+}
+
+#flip div:first-child {
+    animation: show 10s linear infinite;
+}
+
+/* #flip div div {
+    background: #42c58a;
+}
+#flip #sec div {
+    background: #70d5b6;
+}
+
+#flip div:first-child div {
+    background: #2ace1e;
+}
+
+#flip div:last-child div {
+    background: #659406;
+} */
+
+@keyframes show {
+    0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
 }
