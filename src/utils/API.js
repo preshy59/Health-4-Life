@@ -10,7 +10,7 @@ const BASEURL = "https://dietagram.p.rapidapi.com/apiFood.php";
       url: BASEURL,
       params: {name: query},
       headers: {
-        'X-RapidAPI-Key': '7986c133bemsh5ec2132fcc9184ep1df58fjsn993ce4ff363b',
+        'X-RapidAPI-Key': 'eec4f08858mshffc523f4d5741d9p1d9f43jsn46283578c81b',
         'X-RapidAPI-Host': 'dietagram.p.rapidapi.com'
       }
     };
