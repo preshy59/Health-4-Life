@@ -115,7 +115,7 @@ Distrubed under the [![License: MIT](https://img.shields.io/badge/License-MIT-ye
 
 <!-- LINKS -->
 ## Project Link
-GitHub Link : https://github.com/S-R-i-c-e/Health-4-Life
+GitHub Link : https://github.com/preshy59/Health-4-Life
 Deployment Link: https://cool-heliotrope-4ec7d1.netlify.app/
 
 
